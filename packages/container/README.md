@@ -1,6 +1,6 @@
 # container
 
-Container Micro-App
+Container Micro-Application
 
 ## Getting started
 
