@@ -9,14 +9,14 @@ const prodConfig = {
     mode: 'production',
     output: {
       filename: '[name].[contenthash].js',
-      publicPath: '/auth/latest/'
+      publicPath: '/container/latest/'
     },
     plugins: [
         new ModuleFederationPlugin({
-            name: 'auth',
-            filename: 'remoteEntry.js',
-            exposes: {
-                './AuthApp': './src/bootstrap.js',
+            name: 'container',
+            remotes: {
+                marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`,
+                auth: `auth@${domain}/auth/latest/remoteEntry.js`,
             },
             shared: packageJson.dependencies,
         }),
