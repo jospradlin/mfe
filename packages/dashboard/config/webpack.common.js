@@ -1,3 +1,7 @@
+/**
+ * Webpack Config common to both Development and Production
+ * This will be merged with either `webpack.dev.js` or `webpack.prod.js` depending on whether we are building for Development or Production respectively
+ */
 const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
